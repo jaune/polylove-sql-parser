@@ -13,7 +13,7 @@ OrderByColumn
  / name:ColumnName
 
 OrderByDirection
- = "DESC" / "ASC"
+ = "DESC" / "ASC" / Value
 
 WhereExpression
  = a:WhereExpressionColumn _ "AND" _ b:WhereExpression { return ['and', a, b]; }

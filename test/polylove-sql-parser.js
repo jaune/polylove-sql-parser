@@ -65,5 +65,16 @@ describe('Parser', function() {
       });
     });
 
+    it('SELECT * FROM movies WHERE movies.year = {{year}} ORDER BY movies.title {{direction}}', function () {
+      var qSimpleSelect = parser.parse('SELECT * FROM movies WHERE movies.year = {{year}} ORDER BY movies.title {{direction}}');
+
+      expect(qSimpleSelect).to.deep.equal({
+        columns: ['*'],
+        from: [['movies', 'movies']],
+        where: ['=', ['movies', 'year'], { type: 'property', name: 'year' }],
+        orderBy: [['movies', 'title', { type: 'property', name: 'direction' }]]
+      });
+    });
+
 	});
 });

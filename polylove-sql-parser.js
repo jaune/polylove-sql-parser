@@ -693,6 +693,9 @@ module.exports = (function() {
           s0 = peg$FAILED;
           if (peg$silentFails === 0) { peg$fail(peg$c21); }
         }
+        if (s0 === peg$FAILED) {
+          s0 = peg$parseValue();
+        }
       }
 
       return s0;
