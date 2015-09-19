@@ -1,8 +1,8 @@
 {
   "name": "polylove-sql-parser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
-  "main": "polylove-sql-parser.js",
+  "main": "./index.js",
   "directories": {
     "test": "test"
   },
